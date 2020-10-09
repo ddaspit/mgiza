@@ -15,3 +15,10 @@ mgizapp/src/cmake_install.cmake
 mgizapp/src/mkcls/CMakeFiles
 mgizapp/src/mkcls/Makefile
 mgizapp/src/mkcls/cmake_install.cmake
+
+.vs/
+*.vcxproj*
+*.sln
+*.dir/
+x64/
+x32/

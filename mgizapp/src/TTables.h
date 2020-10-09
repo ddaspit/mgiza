@@ -81,7 +81,7 @@ public:
 						       unique pair */
   }
 #ifdef WIN32
-  inline bool operator() (const pair<WordIndex, WordIndex>& key, const pair<WordIndex, WordIndex>& key2) {
+  inline bool operator() (const pair<WordIndex, WordIndex>& key, const pair<WordIndex, WordIndex>& key2) const {
     return key.first==key2.first && key.second==key2.second;
   }
   enum {
