@@ -324,7 +324,7 @@ bool sentenceHandler::readNextSentence(sentPair& sent)
         sent.eSent.push_back(w);
       else {
         if( PrintedTooLong++<100)
-          cerr << "{WARNING:(a)truncated sentence "<<pair_no<<"}";
+          cerr << "{WARNING:(a)truncated sentence "<<pair_no<<"}"<<endl;
         //cerr << "ERROR: getSentence.cc:getNextSentence(): sentence exceeds preset length limit of : " << MAX_SENTENCE_LENGTH << '\n';
         //cerr << "The following sentence will be truncated\n" << line;
         break ;
@@ -345,7 +345,7 @@ bool sentenceHandler::readNextSentence(sentPair& sent)
         sent.fSent.push_back(w);
       else {
         if( PrintedTooLong++<100)
-          cerr << "{WARNING:(b)truncated sentence "<<pair_no<<"}";
+          cerr << "{WARNING:(b)truncated sentence "<<pair_no<<"}"<<endl;
         //cerr << "ERROR: getSentence.cc:getNextSentence(): sentence exceeds preset length limit of : " << MAX_SENTENCE_LENGTH << '\n';
         //cerr << "The following sentence will be truncated\n" << line;
         break ;

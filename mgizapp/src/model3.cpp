@@ -438,7 +438,11 @@ int model3::viterbi(int noIterationsModel3, int noIterationsModel4,
       nfile_actual = Prefix + ".actual.n3." + number;
       dfile = Prefix + ".d3." + number;
       d4file = Prefix + ".d4." + number;
+#ifdef WIN32
+      d4file2 = Prefix + ".db4." + number;
+#else
       d4file2 = Prefix + ".D4." + number;
+#endif
       d5file = Prefix + ".d5." + number;
       alignfile = Prefix + ".A3." + number;
       test_alignfile = Prefix + ".tst.A3." + number;
@@ -713,7 +717,11 @@ int model3::viterbi_hto3()
     nfile_actual = Prefix + ".actual.n3." + number;
     dfile = Prefix + ".d3." + number;
     d4file = Prefix + ".d4." + number;
+#ifdef WIN32
+    d4file2 = Prefix + ".db4." + number;
+#else
     d4file2 = Prefix + ".D4." + number;
+#endif
     d5file = Prefix + ".d5." + number;
     alignfile = Prefix + ".AH3_";
     alignfile += represent_number(iter, 3);
@@ -782,7 +790,11 @@ int model3::viterbi_3to3()
     nfile_actual = Prefix + ".actual.n3." + number;
     dfile = Prefix + ".d3." + number;
     d4file = Prefix + ".d4." + number;
+#ifdef WIN32
+    d4file2 = Prefix + ".db4." + number;
+#else
     d4file2 = Prefix + ".D4." + number;
+#endif
     d5file = Prefix + ".d5." + number;
     alignfile = Prefix + ".A3_";
     alignfile += represent_number(iter, 3);
@@ -858,7 +870,11 @@ d4model* model3::viterbi_3to4()
     nfile_actual = Prefix + ".actual.n3." + number;
     dfile = Prefix + ".d3." + number;
     d4file = Prefix + ".d4." + number;
+#ifdef WIN32
+    d4file2 = Prefix + ".db4." + number;
+#else
     d4file2 = Prefix + ".D4." + number;
+#endif
     d5file = Prefix + ".d5." + number;
     alignfile = Prefix + ".A34_";
     alignfile += represent_number(iter, 3);
@@ -926,7 +942,11 @@ int model3::viterbi_4to4(d4model& d4m)
     nfile_actual = Prefix + ".actual.n3." + number;
     dfile = Prefix + ".d3." + number;
     d4file = Prefix + ".d4." + number;
+#ifdef WIN32
+    d4file2 = Prefix + ".db4." + number;
+#else
     d4file2 = Prefix + ".D4." + number;
+#endif
     d5file = Prefix + ".d5." + number;
     alignfile = Prefix + ".A4_";
     alignfile += represent_number(iter, 3);
@@ -1076,7 +1096,11 @@ void multi_thread_m34_em(model3& m3, int ncpu, int Model3_Iterations,
       nfile_actual = Prefix + ".actual.n3." + number;
       dfile = Prefix + ".d3." + number;
       d4file = Prefix + ".d4." + number;
+#ifdef WIN32
+      d4file2 = Prefix + ".db4." + number;
+#else
       d4file2 = Prefix + ".D4." + number;
+#endif
       d5file = Prefix + ".d5." + number;
       alignfile = Prefix + ".A3." + number;
       test_alignfile = Prefix + ".tst.A3." + number;
