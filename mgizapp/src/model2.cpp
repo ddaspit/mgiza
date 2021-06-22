@@ -75,7 +75,11 @@ int model2::em_with_tricks(int noIterations,bool dumpCount,
     dump_files = (Model2_Dump_Freq != 0) && ((it % Model2_Dump_Freq) == 0) && !NODUMPS;
     const string number = represent_number(it);
     tfile = Prefix + ".t" + shortModelName + "." + number ;
+#ifdef WIN32
+    afile = Prefix + ".ap" + shortModelName + "." + number ;
+#else
     afile = Prefix + ".a" + shortModelName + "." + number ;
+#endif
     alignfile = Prefix + ".A" + shortModelName + "." + number ;
     test_alignfile = Prefix + ".tst.A" + shortModelName + "." + number ;
     aCountTable.clear();

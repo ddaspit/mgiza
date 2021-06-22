@@ -398,7 +398,7 @@ public:
         m4_key key(M4_Dependencies,l,m,F,E,prevj,vacancies1,vacancies2);
         map<m4_key,Vpff,compareb1 >::iterator p=Db1.find(key);
         if(p==Db1.end())p=Db1.insert(make_pair(key,Vpff(msl*2+1,pair<COUNT,PROB>(0.0,0.0)))).first;
-        assert(p!=D1.end());
+        assert(p!=Db1.end());
         int i;
         for(i=0; i<len; i++) {
           ifsd1 >> count;
